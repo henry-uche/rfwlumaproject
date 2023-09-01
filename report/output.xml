@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.8.0 on win32)" generated="20230825 19:25:52.636" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="C:\Users\maduk\PycharmProjects\rfw_lumaproject\login.robot">
+<test id="s1-t1" name="Navigate to luma Home page and verify valid login" line="14">
+<kw name="Precondition for login" library="lumaproject_keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230825 19:25:53.793" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<msg timestamp="20230825 19:25:57.723" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230825 19:25:57.723" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 113
+Current browser version is 116.0.5845.111 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00DC6DF3+48691]
+	(No symbol) [0x00D58CC1]
+	(No symbol) [0x00C65068]
+	(No symbol) [0x00C85DAC]
+	(No symbol) [0x00C81AB3]
+	(No symbol) [0x00C80029]
+	(No symbol) [0x00CB07A8]
+	(No symbol) [0x00CB048C]
+	(No symbol) [0x00CAA0C6]
+	(No symbol) [0x00C87E18]
+	(No symbol) [0x00C88F3D]
+	GetHandleVerifier [0x01024EAA+2531050]
+	GetHandleVerifier [0x01064B60+2792352]
+	GetHandleVerifier [0x0105E6EC+2766636]
+	GetHandleVerifier [0x00E50820+612448]
+	(No symbol) [0x00D625BC]
+	(No symbol) [0x00D5E808]
+	(No symbol) [0x00D5E8EB]
+	(No symbol) [0x00D51C77]
+	BaseThreadInitThunk [0x75C37D59+25]
+	RtlInitializeExceptionChain [0x7767B79B+107]
+	RtlClearBits [0x7767B71F+191]
+</msg>
+<status status="FAIL" starttime="20230825 19:25:53.793" endtime="20230825 19:25:57.833"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230825 19:25:57.833" endtime="20230825 19:25:57.833"/>
+</kw>
+<kw name="Wait And Click Element" library="lumaproject_keywords">
+<arg>${HOMEPAGE_SIGNIN_LINK}</arg>
+<doc>wait for element to be enable before clicking</doc>
+<status status="NOT RUN" starttime="20230825 19:25:57.833" endtime="20230825 19:25:57.833"/>
+</kw>
+<status status="FAIL" starttime="20230825 19:25:53.793" endtime="20230825 19:25:57.833"/>
+</kw>
+<kw name="logout users and assert successful logout" library="lumaproject_keywords" type="TEARDOWN">
+<kw name="Wait And Click Element" library="lumaproject_keywords">
+<arg>${USERACC_DROPDOWNLINK}</arg>
+<doc>wait for element to be enable before clicking</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20230825 19:25:57.833" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230825 19:25:57.833" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230825 19:25:57.833" endtime="20230825 19:25:57.879"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230825 19:25:57.879" level="INFO">Clicking element 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/span/button'.</msg>
+<msg timestamp="20230825 19:25:57.879" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230825 19:25:57.879" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230825 19:25:57.879" endtime="20230825 19:25:57.895"/>
+</kw>
+<status status="FAIL" starttime="20230825 19:25:57.833" endtime="20230825 19:25:57.895"/>
+</kw>
+<kw name="Wait And Click Element" library="lumaproject_keywords">
+<arg>${SIGNOUT_USERLINK}</arg>
+<doc>wait for element to be enable before clicking</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20230825 19:25:57.895" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230825 19:25:57.895" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230825 19:25:57.895" endtime="20230825 19:25:57.895"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230825 19:25:57.895" level="INFO">Clicking element 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/div/ul/li[3]/a'.</msg>
+<msg timestamp="20230825 19:25:57.895" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230825 19:25:57.895" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230825 19:25:57.895" endtime="20230825 19:25:57.895"/>
+</kw>
+<status status="FAIL" starttime="20230825 19:25:57.895" endtime="20230825 19:25:57.895"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>You are signed out</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20230825 19:25:57.895" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230825 19:25:57.895" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230825 19:25:57.895" endtime="20230825 19:25:57.895"/>
+</kw>
+<status status="FAIL" starttime="20230825 19:25:57.833" endtime="20230825 19:25:57.895">Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.</status>
+</kw>
+<tag>DEBUG</tag>
+<status status="FAIL" starttime="20230825 19:25:53.793" endtime="20230825 19:25:57.895">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 113
+Current browser version is 116.0.5845.111 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00DC6DF3+48691]
+	(No symbol) [0x00D58CC1]
+	(No symbol) [0x00C65068]
+	(No symbol) [0x00C85DAC]
+	(No symbol) [0x00C81AB3]
+	(No symbol) [0x00C80029]
+	(No symbol) [0x00CB07A8]
+	(No symbol) [0x00CB048C]
+	(No symbol) [0x00CAA0C6]
+	(No symbol) [0x00C87E18]
+	(No symbol) [0x00C88F3D]
+	GetHandleVerifier [0x01024EAA+2531050]
+	GetHandleVerifier [0x01064B60+2792352]
+	GetHandleVerifier [0x0105E6EC+2766636]
+	GetHandleVerifier [0x00E50820+612448]
+	(No symbol) [0x00D625BC]
+	(No symbol) [0x00D5E808]
+	(No symbol) [0x00D5E8EB]
+	(No symbol) [0x00D51C77]
+	BaseThreadInitThunk [0x75C37D59+25]
+	RtlInitializeExceptionChain [0x7767B79B+107]
+	RtlClearBits [0x7767B71F+191]
+
+
+Also teardown failed:
+Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.</status>
+</test>
+<test id="s1-t2" name="Verify tha invalid credentials should not login successfully" line="22">
+<kw name="users with invalid credentilas should receive the correct error message">
+<arg>${INVALID_USERNAME4}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<arg>${LOGGEDIN_USERNAME}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230825 19:25:57.911" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<msg timestamp="20230825 19:26:01.639" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230825 19:26:01.639" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 113
+Current browser version is 116.0.5845.111 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00DC6DF3+48691]
+	(No symbol) [0x00D58CC1]
+	(No symbol) [0x00C65068]
+	(No symbol) [0x00C85DAC]
+	(No symbol) [0x00C81AB3]
+	(No symbol) [0x00C80029]
+	(No symbol) [0x00CB07A8]
+	(No symbol) [0x00CB048C]
+	(No symbol) [0x00CAA0C6]
+	(No symbol) [0x00C87E18]
+	(No symbol) [0x00C88F3D]
+	GetHandleVerifier [0x01024EAA+2531050]
+	GetHandleVerifier [0x01064B60+2792352]
+	GetHandleVerifier [0x0105E6EC+2766636]
+	GetHandleVerifier [0x00E50820+612448]
+	(No symbol) [0x00D625BC]
+	(No symbol) [0x00D5E808]
+	(No symbol) [0x00D5E8EB]
+	(No symbol) [0x00D51C77]
+	BaseThreadInitThunk [0x75C37D59+25]
+	RtlInitializeExceptionChain [0x7767B79B+107]
+	RtlClearBits [0x7767B71F+191]
+</msg>
+<status status="FAIL" starttime="20230825 19:25:57.911" endtime="20230825 19:26:01.639"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:01.639" endtime="20230825 19:26:01.639"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOMEPAGE_SIGNIN_LINK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:01.639" endtime="20230825 19:26:01.639"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOMEPAGE_SIGNIN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:01.639" endtime="20230825 19:26:01.639"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_FEILD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:01.639" endtime="20230825 19:26:01.639"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_FEILD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:01.639" endtime="20230825 19:26:01.639"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:01.639" endtime="20230825 19:26:01.639"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>${loggedInUser}</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:01.639" endtime="20230825 19:26:01.639"/>
+</kw>
+<status status="FAIL" starttime="20230825 19:25:57.911" endtime="20230825 19:26:01.639"/>
+</kw>
+<kw name="users with invalid credentilas should receive the correct error message">
+<arg>${VALID_LOGINEMAIL}</arg>
+<arg>${INVALID_PASSWORD4}</arg>
+<arg>${LOGGEDIN_USERNAME}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230825 19:26:01.639" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<msg timestamp="20230825 19:26:05.337" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230825 19:26:05.337" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 113
+Current browser version is 116.0.5845.111 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00DC6DF3+48691]
+	(No symbol) [0x00D58CC1]
+	(No symbol) [0x00C65068]
+	(No symbol) [0x00C85DAC]
+	(No symbol) [0x00C81AB3]
+	(No symbol) [0x00C80029]
+	(No symbol) [0x00CB07A8]
+	(No symbol) [0x00CB048C]
+	(No symbol) [0x00CAA0C6]
+	(No symbol) [0x00C87E18]
+	(No symbol) [0x00C88F3D]
+	GetHandleVerifier [0x01024EAA+2531050]
+	GetHandleVerifier [0x01064B60+2792352]
+	GetHandleVerifier [0x0105E6EC+2766636]
+	GetHandleVerifier [0x00E50820+612448]
+	(No symbol) [0x00D625BC]
+	(No symbol) [0x00D5E808]
+	(No symbol) [0x00D5E8EB]
+	(No symbol) [0x00D51C77]
+	BaseThreadInitThunk [0x75C37D59+25]
+	RtlInitializeExceptionChain [0x7767B79B+107]
+	RtlClearBits [0x7767B71F+191]
+</msg>
+<status status="FAIL" starttime="20230825 19:26:01.639" endtime="20230825 19:26:05.337"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:05.337" endtime="20230825 19:26:05.337"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOMEPAGE_SIGNIN_LINK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:05.337" endtime="20230825 19:26:05.337"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOMEPAGE_SIGNIN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:05.337" endtime="20230825 19:26:05.337"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_FEILD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:05.337" endtime="20230825 19:26:05.337"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_FEILD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:05.337" endtime="20230825 19:26:05.337"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:05.337" endtime="20230825 19:26:05.337"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>${loggedInUser}</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:05.337" endtime="20230825 19:26:05.337"/>
+</kw>
+<status status="FAIL" starttime="20230825 19:26:01.639" endtime="20230825 19:26:05.337"/>
+</kw>
+<kw name="users with invalid credentilas should receive the correct error message">
+<arg>${INVALID_USERNAME4}</arg>
+<arg>${INVALID_PASSWORD4}</arg>
+<arg>${LOGGEDIN_USERNAME}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230825 19:26:05.337" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<msg timestamp="20230825 19:26:08.831" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230825 19:26:08.831" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 113
+Current browser version is 116.0.5845.111 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00DC6DF3+48691]
+	(No symbol) [0x00D58CC1]
+	(No symbol) [0x00C65068]
+	(No symbol) [0x00C85DAC]
+	(No symbol) [0x00C81AB3]
+	(No symbol) [0x00C80029]
+	(No symbol) [0x00CB07A8]
+	(No symbol) [0x00CB048C]
+	(No symbol) [0x00CAA0C6]
+	(No symbol) [0x00C87E18]
+	(No symbol) [0x00C88F3D]
+	GetHandleVerifier [0x01024EAA+2531050]
+	GetHandleVerifier [0x01064B60+2792352]
+	GetHandleVerifier [0x0105E6EC+2766636]
+	GetHandleVerifier [0x00E50820+612448]
+	(No symbol) [0x00D625BC]
+	(No symbol) [0x00D5E808]
+	(No symbol) [0x00D5E8EB]
+	(No symbol) [0x00D51C77]
+	BaseThreadInitThunk [0x75C37D59+25]
+	RtlInitializeExceptionChain [0x7767B79B+107]
+	RtlClearBits [0x7767B71F+191]
+</msg>
+<status status="FAIL" starttime="20230825 19:26:05.337" endtime="20230825 19:26:08.831"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:08.831" endtime="20230825 19:26:08.831"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOMEPAGE_SIGNIN_LINK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:08.831" endtime="20230825 19:26:08.831"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOMEPAGE_SIGNIN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:08.831" endtime="20230825 19:26:08.831"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_FEILD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:08.831" endtime="20230825 19:26:08.831"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_FEILD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:08.831" endtime="20230825 19:26:08.831"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:08.831" endtime="20230825 19:26:08.831"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>${loggedInUser}</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:08.831" endtime="20230825 19:26:08.831"/>
+</kw>
+<status status="FAIL" starttime="20230825 19:26:05.337" endtime="20230825 19:26:08.831"/>
+</kw>
+<kw name="users with invalid credentilas should receive the correct error message">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<arg>${LOGGEDIN_USERNAME}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230825 19:26:08.831" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<msg timestamp="20230825 19:26:12.382" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230825 19:26:12.382" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 113
+Current browser version is 116.0.5845.111 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00DC6DF3+48691]
+	(No symbol) [0x00D58CC1]
+	(No symbol) [0x00C65068]
+	(No symbol) [0x00C85DAC]
+	(No symbol) [0x00C81AB3]
+	(No symbol) [0x00C80029]
+	(No symbol) [0x00CB07A8]
+	(No symbol) [0x00CB048C]
+	(No symbol) [0x00CAA0C6]
+	(No symbol) [0x00C87E18]
+	(No symbol) [0x00C88F3D]
+	GetHandleVerifier [0x01024EAA+2531050]
+	GetHandleVerifier [0x01064B60+2792352]
+	GetHandleVerifier [0x0105E6EC+2766636]
+	GetHandleVerifier [0x00E50820+612448]
+	(No symbol) [0x00D625BC]
+	(No symbol) [0x00D5E808]
+	(No symbol) [0x00D5E8EB]
+	(No symbol) [0x00D51C77]
+	BaseThreadInitThunk [0x75C37D59+25]
+	RtlInitializeExceptionChain [0x7767B79B+107]
+	RtlClearBits [0x7767B71F+191]
+</msg>
+<status status="FAIL" starttime="20230825 19:26:08.831" endtime="20230825 19:26:12.382"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:12.382" endtime="20230825 19:26:12.382"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOMEPAGE_SIGNIN_LINK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:12.382" endtime="20230825 19:26:12.382"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOMEPAGE_SIGNIN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:12.382" endtime="20230825 19:26:12.382"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_FEILD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:12.382" endtime="20230825 19:26:12.382"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_FEILD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:12.382" endtime="20230825 19:26:12.382"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:12.382" endtime="20230825 19:26:12.382"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>${loggedInUser}</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="NOT RUN" starttime="20230825 19:26:12.382" endtime="20230825 19:26:12.382"/>
+</kw>
+<status status="FAIL" starttime="20230825 19:26:08.831" endtime="20230825 19:26:12.382"/>
+</kw>
+<tag>henry</tag>
+<status status="FAIL" starttime="20230825 19:25:57.911" endtime="20230825 19:26:12.382">Several failures occurred:
+
+1) SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 113
+Current browser version is 116.0.5845.111 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00DC6DF3+48691]
+	(No symbol) [0x00D58CC1]
+	(No symbol) [0x00C65068]
+	(No symbol) [0x00C85DAC]
+	(No symbol) [0x00C81AB3]
+	(No symbol) [0x00C80029]
+	(No symbol) [0x00CB07A8]
+	(No symbol) [0x00CB048C]
+	(No symbol) [0x00CAA0C6]
+	(No symbol) [0x00C87E18]
+	(No symbol) [0x00C88F3D]
+	GetHandleVerifier [0x01024EAA+2531050]
+    [ Message content over the limit has been removed. ]
+	(No symbol) [0x00C65068]
+	(No symbol) [0x00C85DAC]
+	(No symbol) [0x00C81AB3]
+	(No symbol) [0x00C80029]
+	(No symbol) [0x00CB07A8]
+	(No symbol) [0x00CB048C]
+	(No symbol) [0x00CAA0C6]
+	(No symbol) [0x00C87E18]
+	(No symbol) [0x00C88F3D]
+	GetHandleVerifier [0x01024EAA+2531050]
+	GetHandleVerifier [0x01064B60+2792352]
+	GetHandleVerifier [0x0105E6EC+2766636]
+	GetHandleVerifier [0x00E50820+612448]
+	(No symbol) [0x00D625BC]
+	(No symbol) [0x00D5E808]
+	(No symbol) [0x00D5E8EB]
+	(No symbol) [0x00D51C77]
+	BaseThreadInitThunk [0x75C37D59+25]
+	RtlInitializeExceptionChain [0x7767B79B+107]
+	RtlClearBits [0x7767B71F+191]</status>
+</test>
+<doc>login related test cases</doc>
+<status status="FAIL" starttime="20230825 19:25:52.652" endtime="20230825 19:26:12.382"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">DEBUG</stat>
+<stat pass="0" fail="1" skip="0">henry</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

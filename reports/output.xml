@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.8.0 on win32)" generated="20230827 20:24:44.088" rpa="false" schemaversion="4">
+<suite id="s1" name="CreateNewUserAccount" source="C:\Users\maduk\PycharmProjects\rfw_lumaproject\CreateNewUserAccount.robot">
+<test id="s1-t1" name="Verify user can modify address book" line="20">
+<kw name="Precondition for login" library="lumaproject_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230827 20:24:45.729" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<status status="PASS" starttime="20230827 20:24:45.729" endtime="20230827 20:24:51.251"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230827 20:24:51.251" endtime="20230827 20:24:51.448"/>
+</kw>
+<kw name="Wait And Click Element" library="lumaproject_keywords">
+<arg>${HOMEPAGE_SIGNIN_LINK}</arg>
+<doc>wait for element to be enable before clicking</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230827 20:24:51.449" endtime="20230827 20:24:51.826"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230827 20:24:51.826" level="INFO">Clicking element 'xpath:/html/body/div[2]/header/div[1]/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20230827 20:24:51.826" endtime="20230827 20:24:53.087"/>
+</kw>
+<status status="PASS" starttime="20230827 20:24:51.448" endtime="20230827 20:24:53.088"/>
+</kw>
+<status status="PASS" starttime="20230827 20:24:45.729" endtime="20230827 20:24:53.088"/>
+</kw>
+<kw name="Login with valid credentials and assert successful login" library="lumaproject_keywords">
+<arg>bobby7762@gmail.com</arg>
+<arg>BXBXZK679ssrr</arg>
+<arg>Bobby Flash</arg>
+<kw name="Wait And Input Text In The Text Field" library="lumaproject_keywords">
+<arg>${USERNAME_FEILD}</arg>
+<arg>${VALID_LOGINEMAIL}</arg>
+<doc>wait for text field to be enable before typing text into the text field</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230827 20:24:53.094" endtime="20230827 20:24:53.372"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230827 20:24:53.373" level="INFO">Typing text 'yryan@example.org' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20230827 20:24:53.372" endtime="20230827 20:24:53.607"/>
+</kw>
+<status status="PASS" starttime="20230827 20:24:53.092" endtime="20230827 20:24:53.607"/>
+</kw>
+<kw name="Wait And Input Text In The Text Field" library="lumaproject_keywords">
+<arg>${PASSWORD_FEILD}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>wait for text field to be enable before typing text into the text field</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230827 20:24:53.625" endtime="20230827 20:24:53.657"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230827 20:24:53.657" level="INFO">Typing text 'text123TEXT5zz' into text field 'id:pass'.</msg>
+<status status="PASS" starttime="20230827 20:24:53.657" endtime="20230827 20:24:53.774"/>
+</kw>
+<status status="PASS" starttime="20230827 20:24:53.623" endtime="20230827 20:24:53.774"/>
+</kw>
+<kw name="Wait And Click Element" library="lumaproject_keywords">
+<arg>${LOGIN_BTN}</arg>
+<doc>wait for element to be enable before clicking</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230827 20:24:53.775" endtime="20230827 20:24:53.809"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230827 20:24:53.810" level="INFO">Clicking element 'id:send2'.</msg>
+<status status="PASS" starttime="20230827 20:24:53.810" endtime="20230827 20:24:55.398"/>
+</kw>
+<status status="PASS" starttime="20230827 20:24:53.774" endtime="20230827 20:24:55.398"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${LOGGEDIN_USERNAME}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230827 20:24:55.398" endtime="20230827 20:24:56.568"/>
+</kw>
+<status status="PASS" starttime="20230827 20:24:53.091" endtime="20230827 20:24:56.568"/>
+</kw>
+<kw name="Modify users address and save" library="lumaproject_keywords">
+<kw name="Wait And Click Element" library="lumaproject_keywords">
+<arg>${USERACC_DROPDOWNLINK}</arg>
+<doc>wait for element to be enable before clicking</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20230827 20:25:02.438" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-126.png"&gt;&lt;img src="selenium-screenshot-126.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230827 20:25:02.438" level="FAIL">Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/span/button' not found.</msg>
+<status status="FAIL" starttime="20230827 20:24:56.568" endtime="20230827 20:25:02.485"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<status status="FAIL" starttime="20230827 20:24:56.568" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="Wait And Click Element" library="lumaproject_keywords">
+<arg>${MYACCOUNT_LINK}</arg>
+<doc>wait for element to be enable before clicking</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="Wait And Click Element" library="lumaproject_keywords">
+<arg>${ADDRSBOOK_LINK}</arg>
+<doc>wait for element to be enable before clicking</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${TELEPHONE_NUM}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="Wait And Input Text In The Text Field" library="lumaproject_keywords">
+<arg>${TELEPHONE_NUM}</arg>
+<arg>+4912518697755</arg>
+<doc>wait for text field to be enable before typing text into the text field</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${STREET_ADDRS}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="Wait And Input Text In The Text Field" library="lumaproject_keywords">
+<arg>${STREET_ADDRS}</arg>
+<arg>Hermannstraße67</arg>
+<doc>wait for text field to be enable before typing text into the text field</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>${COUNTRY}</arg>
+<arg>84</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${STATE_PROVINCE}</arg>
+<arg>Bayern</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="Wait And Input Text In The Text Field" library="lumaproject_keywords">
+<arg>${CITY_TOWN}</arg>
+<arg>Regensbug</arg>
+<doc>wait for text field to be enable before typing text into the text field</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${ZIP_POSTAL CODE}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="Wait And Input Text In The Text Field" library="lumaproject_keywords">
+<arg>${ZIP_POSTAL CODE}</arg>
+<arg>93047</arg>
+<doc>wait for text field to be enable before typing text into the text field</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="Wait And Click Element" library="lumaproject_keywords">
+<arg>${SAVE_ADDRESS}</arg>
+<doc>wait for element to be enable before clicking</doc>
+<status status="NOT RUN" starttime="20230827 20:25:02.501" endtime="20230827 20:25:02.501"/>
+</kw>
+<status status="FAIL" starttime="20230827 20:24:56.568" endtime="20230827 20:25:02.501"/>
+</kw>
+<kw name="logout users and assert successful logout" library="lumaproject_keywords" type="TEARDOWN">
+<kw name="Wait And Click Element" library="lumaproject_keywords">
+<arg>${USERACC_DROPDOWNLINK}</arg>
+<doc>wait for element to be enable before clicking</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20230827 20:25:08.158" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-127.png"&gt;&lt;img src="selenium-screenshot-127.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230827 20:25:08.158" level="FAIL">Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/span/button' not found.</msg>
+<status status="FAIL" starttime="20230827 20:25:02.501" endtime="20230827 20:25:08.158"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230827 20:25:08.158" level="INFO">Clicking element 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/span/button'.</msg>
+<msg timestamp="20230827 20:25:08.802" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-128.png"&gt;&lt;img src="selenium-screenshot-128.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230827 20:25:08.802" level="FAIL">Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/span/button' not found.</msg>
+<status status="FAIL" starttime="20230827 20:25:08.158" endtime="20230827 20:25:08.849"/>
+</kw>
+<status status="FAIL" starttime="20230827 20:25:02.501" endtime="20230827 20:25:08.849"/>
+</kw>
+<kw name="Wait And Click Element" library="lumaproject_keywords">
+<arg>${SIGNOUT_USERLINK}</arg>
+<doc>wait for element to be enable before clicking</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20230827 20:25:14.650" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-129.png"&gt;&lt;img src="selenium-screenshot-129.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230827 20:25:14.650" level="FAIL">Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/div/ul/li[3]/a' not found.</msg>
+<status status="FAIL" starttime="20230827 20:25:08.849" endtime="20230827 20:25:14.650"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230827 20:25:14.650" level="INFO">Clicking element 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/div/ul/li[3]/a'.</msg>
+<msg timestamp="20230827 20:25:15.300" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-130.png"&gt;&lt;img src="selenium-screenshot-130.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230827 20:25:15.300" level="FAIL">Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/div/ul/li[3]/a' not found.</msg>
+<status status="FAIL" starttime="20230827 20:25:14.650" endtime="20230827 20:25:15.300"/>
+</kw>
+<status status="FAIL" starttime="20230827 20:25:08.849" endtime="20230827 20:25:15.300"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>You are signed out</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20230827 20:25:25.931" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-131.png"&gt;&lt;img src="selenium-screenshot-131.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230827 20:25:25.931" level="FAIL">Text 'You are signed out' did not appear in 10 seconds.</msg>
+<status status="FAIL" starttime="20230827 20:25:15.300" endtime="20230827 20:25:25.931"/>
+</kw>
+<status status="FAIL" starttime="20230827 20:25:02.501" endtime="20230827 20:25:25.931">Several failures occurred:
+
+1) Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/span/button' not found.
+
+2) Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/span/button' not found.
+
+3) Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/div/ul/li[3]/a' not found.
+
+4) Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/div/ul/li[3]/a' not found.
+
+5) Text 'You are signed out' did not appear in 10 seconds.</status>
+</kw>
+<tag>Modify</tag>
+<status status="FAIL" starttime="20230827 20:24:45.729" endtime="20230827 20:25:25.931">Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/span/button' not found.
+
+Also teardown failed:
+Several failures occurred:
+
+1) Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/span/button' not found.
+
+2) Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/span/button' not found.
+
+3) Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/div/ul/li[3]/a' not found.
+
+4) Element with locator 'xpath:/html/body/div[1]/header/div[1]/div/ul/li[2]/div/ul/li[3]/a' not found.
+
+5) Text 'You are signed out' did not appear in 10 seconds.</status>
+</test>
+<doc>tests verifying new account creation</doc>
+<status status="FAIL" starttime="20230827 20:24:44.088" endtime="20230827 20:25:25.931"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Modify</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="CreateNewUserAccount">CreateNewUserAccount</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
